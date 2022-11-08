@@ -1,0 +1,242 @@
+@font-face {
+  font-family: KumbhSans-Regular;
+  src: url(/fonts/KumbhSans-Regular.woff);
+}
+
+* {
+  margin: 0;
+  font-family: KumbhSans-Regular;
+}
+
+body {
+  height: 500ch;
+  background: linear-gradient(to bottom, #17162e 80%, black) no-repeat;
+}
+
+.conteiner-top {
+  display: flexbox;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.conteiner-top h1 {
+  margin: 30px;
+  position: relative;
+  width: auto;
+  height: 45px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 45px;
+  color: white;
+}
+
+.search {
+  color: white;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 390px;
+  height: 30px;
+  padding-left: 20px;
+  /* background-image: url(img/search-icon.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position: 95%; */
+}
+
+input[type='submit'] {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url(/img/search-icon.svg);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  margin-left: -50px;
+  /* left: 20px; */
+  top: 21px;
+  height: 49px;
+  width: 45px;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.conteiner-checkbox input {
+  display: none;
+}
+
+.conteiner-checkbox input + #label-fav::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px #706ea8 solid;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-bottom: 3px;
+}
+
+.conteiner-checkbox input:checked + #label-fav::before {
+  background-image: url(/img/iconmonstr-check-mark-17.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  border: none;
+  padding: 2px;
+  background-color: #706ea8;
+}
+#label-fav {
+  color: rgb(230, 230, 230);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.conteiner-mid,
+.movie {
+  /* width: 0; */
+  /* margin-left: 25%; */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* border: solid 1px red; */
+}
+
+.card-film {
+  display: inline-flex;
+  flex-direction: row;
+  margin-top: 50px;
+  padding: 10px;
+  background-color: #1d1c3b;
+  width: 50%;
+  height: 10em;
+  /* border: 1px red solid; */
+  border-radius: 8px;
+  box-shadow: 32.8387px 24.5482px 79px rgba(0, 0, 0, 0.15),
+    23.8851px 17.855px 53.2479px rgba(0, 0, 0, 0.121406),
+    16.6246px 12.4276px 34.4391px rgba(0, 0, 0, 0.10125),
+    10.9035px 8.15079px 21.3701px rgba(0, 0, 0, 0.0867188),
+    6.56775px 4.90965px 12.8375px rgba(0, 0, 0, 0.075),
+    3.46346px 2.58907px 7.6377px rgba(0, 0, 0, 0.0632813),
+    1.4367px 1.07399px 4.56719px rgba(0, 0, 0, 0.04875),
+    0.333519px 0.249318px 2.42246px rgba(0, 0, 0, 0.0285938);
+}
+
+.date-film {
+  width: 250px;
+  color: white;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.name-film {
+  position: relative;
+  top: -20px;
+  left: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}
+
+.img-fav-classf {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  align-items: justify;
+}
+
+.star,
+.fav {
+  padding-left: 40px;
+  padding-right: 10px;
+  margin-bottom: 3px;
+}
+
+.text {
+  /* border: 1px red solid; */
+  margin-top: 1px;
+  margin-left: 50px;
+  inset: 100px 100px;
+  width: 475px;
+  overflow: hidden;
+  text-align: justify;
+  height: 160px;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  color: #acacac;
+}
+
+.img-film-card img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+  filter: drop-shadow(20px 20px 30px rgba(0, 0, 0, 0.3));
+  margin-top: 15px;
+  margin-left: 15px;
+  /* border: 1px red solid; */
+}
+
+@media only screen and (max-width: 980px) {
+  body {
+    background: linear-gradient(to bottom, #17162e 60%, black) no-repeat;
+  }
+  .card-film {
+    display: inline-flex;
+    flex-direction: row;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #1d1c3b;
+    width: 90%;
+    height: 10em;
+    border-radius: 8px;
+  }
+  .date-film {
+    width: 200px;
+    color: white;
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .name-film {
+    position: relative;
+    top: -20px;
+    left: 15px;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+  }
+
+  .text {
+    /* border: 1px red solid; */
+    margin-top: 1px;
+    margin-left: 50px;
+    inset: 100px 100px;
+    width: 380px;
+    text-align: justify;
+    height: 160px;
+    line-clamp: 2;
+    display: -webkit-box;
+    font-size: 16px;
+    color: #acacac;
+  }
+}

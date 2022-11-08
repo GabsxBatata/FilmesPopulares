@@ -1,0 +1,5 @@
+# ignorar chave API
+modules/
+node_modules/
+.editorconfig
+.prettierrc.js
